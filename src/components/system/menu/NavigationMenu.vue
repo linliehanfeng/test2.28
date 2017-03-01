@@ -34,7 +34,6 @@
             }
         },
         computed: {
-            
             //计算每个item的占的宽度
               number(){
             if(this.items.length<=21){

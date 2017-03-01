@@ -31,20 +31,20 @@
         },
         methods:{
              login(){
-                 // if(this.user.name.trim()==''||this.user.password.trim()==''){
-                //     this.$message({
-                //         message:'用户名或密码不能为空',
-                //         type:'warning'
-                //     })
-                // }else if(this.user.name.trim()=='admin'&&this.user.password.trim()=='123'){
-                //     this.$message({
-                //         message:'登录成功',
-                //         type:'success'
-                //     });
+                 if(this.user.name.trim()==''||this.user.password.trim()==''){
+                    this.$message({
+                        message:'用户名或密码不能为空',
+                        type:'warning'
+                    })
+                }else if(this.user.name.trim()=='admin'&&this.user.password.trim()=='123'){
+                    this.$message({
+                        message:'登录成功',
+                        type:'success'
+                    });
                     this.$router.push('/main')
-                // }else{
-                //     this.$message.error('用户名或密码错误！')
-                // }
+                }else{
+                    this.$message.error('用户名或密码错误！')
+                }
             //存入cookie
                 document.cookie = 'username='+this.user.name;
                 // this.$store.dispatch('incrementAsync',this.user);
